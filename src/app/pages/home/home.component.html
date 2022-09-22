@@ -1,0 +1,17 @@
+<h1>Find your contact </h1>
+<div class="center">
+    <app-input (emmitSearch)="getSearch($event)"></app-input>
+</div>
+<section class="listagem">
+
+    <ng-template ngFor let-data [ngForOf]="getAllData">
+
+        <div class="card">
+            <h2>
+                {{data.name}}
+            </h2>
+            <p>{{data.email}}</p>
+        </div>
+
+    </ng-template>
+</section>

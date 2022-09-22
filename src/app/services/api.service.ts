@@ -1,0 +1,16 @@
+import { Injectable } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { map, Observable, tap } from 'rxjs'
+
+@Injectable({
+  providedIn: 'root',
+})
+export class ApiService {
+  private url: string = 'http://localhost:8080/placeholder'
+
+  constructor(private http: HttpClient) {}
+
+  get apiResult(): Observable<any> {
+    return this.http.get<any>(this.url).pipe(tap((res) => res))
+  }
+}
