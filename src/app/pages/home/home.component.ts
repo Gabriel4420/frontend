@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
     this.api.apiResult.subscribe((data) => {
       this.setAllData = data
       this.getAllData = this.setAllData
+      console.log(this.getAllData)
     })
   }
 }

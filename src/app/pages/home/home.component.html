@@ -5,10 +5,20 @@
     <ng-template ngFor let-data [ngForOf]="getAllData">
 
         <div class="card">
-            <h2>
-                {{data.name}}
-            </h2>
-            <p>{{data.email}}</p>
+            <div class="infos">
+                <h2>
+                    {{data.username}} | {{data.name}}
+                </h2>
+                <p>{{data.phone}}</p>
+                <p>{{data.email}}</p>
+                <p id="website">{{data.website}}</p>
+            </div>
+            <div class="address">
+                <h2>{{data.address.city}}</h2>
+                <p>{{data.address.street}}</p>
+                <p>{{data.address.suite}}</p>
+                <p>{{data.address.zipcode}}</p>
+            </div>
         </div>
 
     </ng-template>
