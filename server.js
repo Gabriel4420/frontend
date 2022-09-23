@@ -2,7 +2,7 @@ const express = require('express')
 
 const app = express()
 
-const appName = 'angular-frontend'
+const appName = 'frontend'
 
 const outputPath = `${__dirname}/dist/${appName}`
 
