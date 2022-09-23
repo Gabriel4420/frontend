@@ -6,7 +6,7 @@ import { map, Observable, tap } from 'rxjs'
   providedIn: 'root',
 })
 export class ApiService {
-  private url: string = `http://localhost:8080/placeholder`
+  private url: string = `https://backend-contacts-test.herokuapp.com/placeholder`
 
   constructor(private http: HttpClient) {}
 
