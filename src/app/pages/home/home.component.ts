@@ -13,14 +13,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private api: ApiService) {}
 
-  public getSearch(value: string) {
-    const filter = this.setAllData.filter((res: any) => {
-      return !res.name
-    })
-
-    this.setAllData = filter
-  }
-
   ngOnInit(): void {
     this.api.apiResult.subscribe((data) => {
       this.setAllData = data
